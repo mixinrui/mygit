@@ -6,7 +6,7 @@
             ,d.STORENAME distStoreName --经销商店铺名称
             ,d.COORPRATIONID corprationId --经销商企业id
             ,e.linkMan distName --联系人
-            ,e.MOBILEPHONE distTelephone --联系电话
+            ,e.MOBILEPHONE distTelephone --联系电话111
             ,(SELECT count(1) FROM store.T_STORE m1 LEFT JOIN goods.t_goods_sku m2 ON m1.storeid = m2.STOREID
             inner join (select GOODSSKUID, MAX(SnapshotNO) SnapshotNO from goods.T_GOODS_SKU GROUP BY GOODSSKUID) maxsku
                 on m2.GOODSSKUID = maxsku.GOODSSKUID and m2.SnapshotNO = maxsku.SnapshotNO
